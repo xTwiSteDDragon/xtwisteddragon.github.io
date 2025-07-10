@@ -1,3 +1,12 @@
+@media (max-width: 768px)
+{
+  .background
+  {
+    flex-direction: row;
+    padding: 10px;
+  }
+}
+
 .logo {
   font-size: 2em;
   text-align: center;
