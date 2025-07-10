@@ -1,11 +1,19 @@
-@media (max-width: 768px)
-{
-  .background
-  {
+@media (max-width: 768px) {
+  .background {
     background-color: rgba(0, 0, 0, 0.425);
     border-radius: 2rem;
     display: flex;
     flex-direction: row;
+    overflow: hidden;
+  }
+
+  .imgPortrait {
+    scale: 0.3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
   }
 }
 
@@ -30,6 +38,15 @@ footer {
   width: 100%;
 }
 
+.imgPortrait {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+/*Note: the background image is present on the off chance particles.js is inoperable.*/
 body {
   background-image: url(assets/spaceBackground.jpg);
   background-repeat: no-repeat;
@@ -54,10 +71,9 @@ body {
   display: flex;
   flex-direction: column;
 }
- 
+
 /*Good for multiple bodies of text on the same page*/
-.multiText
-{
+.multiText {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -67,8 +83,7 @@ body {
   gap: 2rem;
 }
 
-.multiTextItem
-{
+.multiTextItem {
   background-color: rgba(0, 0, 0, 0.425);
   border-radius: 2rem;
 }
@@ -91,15 +106,13 @@ nav a {
 }
 
 /*Particles.js*/
-*
-{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-#particles-js
-{
+#particles-js {
   width: 100%;
   position: fixed;
   z-index: -1;
