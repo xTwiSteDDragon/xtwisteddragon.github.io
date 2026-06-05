@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+main{
+  flex: 1; /*Causes main to take up all leftover space not taken up, forcing footer down*/
+}
+
 body {
   background-image: url(assets/spaceBackground.jpg);
   background-repeat: no-repeat;
@@ -12,6 +16,11 @@ body {
   background-attachment: fixed;
   background-size: cover;
   
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+
   font-family: "Exo", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -143,9 +152,9 @@ nav a {
 
 /* Social Buttons */
 .socBtn {
-  width: 100%;
-  max-width: 325px;
-  height: 335px;
+  width: 260px;
+  max-width: 260px;
+  height: 260px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -174,7 +183,7 @@ nav a {
 .socBtn .BG {
   position: absolute;
   content: "";
-  width: 95%;
+  width: 100%;
   height: 100%;
   background: #686868;
   z-index: -1;
@@ -189,6 +198,13 @@ nav a {
 
 .socBtn:hover .svgContainer {
   background-color: rgba(156, 156, 156, 0.466);
+}
+
+.socImg {
+  height:100%;
+  max-height: 400px;  /* Restricts how tall the icon can get inside the box */
+  width: auto;       /* Keeps the icon proportions perfect */
+  object-fit: contain;
 }
 
 /* ==========================================================================
@@ -225,12 +241,11 @@ footer {
     gap: 1.5rem;
   }
 
-  /* Scale the image up on mobile so it doesn't look tiny */
   .profile-pic {
     width: 65%;
     max-width: 260px;
   }
-
+  
   /* Clean up text sizing for mobile devices */
   .background h1 {
     font-size: 2.2rem;
@@ -238,5 +253,10 @@ footer {
 
   .multiText {
     padding: 1rem;
+  }
+
+  .socBtn {
+    flex-direction: column;
+    align-items: center;
   }
 }
