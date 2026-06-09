@@ -91,6 +91,12 @@ nav a {
   border-radius: 15px;
 }
 
+.bio-text {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
 .background {
   background-color: rgba(0, 0, 0, 0.55);
   border-radius: 2rem;
